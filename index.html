@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title>Welcome!</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/globalStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/infoStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/profileStyle.css">
+    <script src="assets/js/lang.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        // if (window.innerHeight > 1000)
+        $("body").css("font-size", (14 + 2*Math.floor(window.innerHeight/500)) + "px")
+    </script>
+    <div id="langDiv">
+        <div id="lang">
+            <div id="en" class="leftChain langActive" onclick="langChange('en')">EN</div><div id="fr" class="rightChain" onclick="langChange('fr')">FR</div>
+        </div>
+    </div>
+    <div id="header">
+        <h1 id="welcome">Hello, Strangers! Welcome to my profile.</h1>
+    </div>
+    <div id="mainContent">
+        <div id="infoDiv">
+            <div id="aboutDiv">
+                <h3 id="aboutme" class="sectionTitle">About me:</h3>
+                <div class="resizeDiv"><span class="resizeBtn">–</span></div>
+                <div id="aboutBatch" class="batch">
+                    <p id="birth" class="startBatch">Birthday: 2003-01-08</p>
+                    <p id="address">Address: Da Nang, Vietnam</p>
+                    <p id="pronoun">Pronoun: He/Him</p>
+                    <p id="interests" class="endBatch">Interests: Computers, Books, Maths, Nature & Universe</p>
+                </div>
+            </div>
+            <div id="educationDiv">
+                <h3 id="education" class="sectionTitle">Education:</h3>
+                <div class="resizeDiv"><span class="resizeBtn">–</span></div>
+                <div id="batches">
+                    <div class="batch" id="batch1">
+                        <p id="highschool1" class="startBatch">High school: Le Quy Don High School for the Gifted, Da Nang</p>
+                        <p id="specialization1">Specialization: Informatics</p>
+                        <p id="graduateYear1" class="endBatch">Graduation year: 2021</p>
+                    </div>
+                    <div class="batch active" id="batch2">
+                        <p id="university2" class="startBatch">University: University of Information Technology, VNU-HCM</p>
+                        <p id="degree2">Degree: Bachelor of Computer Science</p>
+                        <p id="graduateYear2" class="endBatch">Graduation year (expected): 2025</p>
+                    </div>
+                </div>
+                <div id="nodes">
+                    <span class="dot" onclick="changeEdu(1)"></span>
+                    <span class="dot active" onclick="changeEdu(2)"></span>
+                </div>
+            </div>
+            <div id="skillsDiv">
+                <h3 id="skills" class="sectionTitle">Skills:</h3>
+                <div class="resizeDiv"><span class="resizeBtn">–</span></div>
+                <div id="skillsBatch" class="batch">
+                    <div id="languageDiv">
+                        <span id="language" class="startBatch">Languages:</span>
+                        <img src="assets/images/endland_america.svg" alt="english" class="flag">
+                        <img src="assets/images/france.svg" alt="french" class="flag">
+                    </div>
+                    <div id="programmingDiv">
+                        <p id="programming">Programming: Competitive Programming, C/C++, Python, Javascript</p>
+                        <!-- <ul></ul> -->
+                    </div>
+                    <div id="softDiv">
+                        <p id="softSkills" class="endBatch">Soft skills: Analytical, Problem Solving</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--
+     --><div id="profileDiv">
+            <div id="profile">
+                <img id="profilePic" src="assets/images/profile.png">
+                <div>
+                    <div id="infos">
+                        <p id="nameProfile">Vo Viet Thuan</p>
+                        <p id="ageProfile"></p>
+                        <script>
+                            let currentLang = 'en'
+                            function ageCalc() {
+                                let date = new Date();
+                                let age = date.getUTCFullYear() - 2003
+                                if (date.getUTCMonth() == 0 && date.getUTCDate() < 8)
+                                    age--;
+                                $("#ageProfile").html(age + lang[currentLang].age)
+                            }
+                            ageCalc()
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="quote">
+                <div>
+                    <blockquote id="quote1" class="endBatch">Don't compare yourself to others;</blockquote>
+                    <blockquote id="quote2" class="startBatch">Compare yourself to who you were yesterday</blockquote>
+                </div>
+            </div>
+            <div id="contactDiv">
+                <h3 id="contactme" class="sectionTitle">Contact me:</h3>
+                <div class="batch">
+                    <a href="https://www.facebook.com/NeutralBlaster" target="_blank"><img src="assets/images/facebook.svg"></a>
+                    <a href="mailto: thuanvoviet314@gmail.com" target="_blank"><img src="assets/images/gmail.svg"></a>
+                    <a href="https://www.reddit.com/user/NeutralBlaster" target="_blank"><img src="assets/images/reddit.svg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/mainScript.js"></script>
+</body>    
+</html>

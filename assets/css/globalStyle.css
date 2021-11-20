@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(32, 33, 36);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 1em 2% 0 2%;
+}
+
+body #mainContent > div {
+    display: inline-block;
+    float: left;
+}
+
+.batch {
+    background-color: rgb(52, 53, 56);
+    padding: 2%;
+    border-radius: 0.5em;
+}
+
+.startBatch {
+    margin-top: 0px;
+}
+
+.endBatch {
+    margin-bottom: 0px;
+}
+
+.hideContent {
+    display: none !important;
+}
+
+.sectionTitle {
+    margin-top: 0px;
+    display: inline-block;
+}
+
+#langDiv {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 1.25em;
+}
+
+#lang > div {
+    display: inline-block;
+    float: left;
+    width: 2em;
+    height: 1.5em;
+    background-color: rgba(10, 10, 10, 0.8);
+    color: rgb(80, 80, 80);
+    text-align: center;
+}
+
+#lang > div:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+    /*color: rgb(80, 80, 80);*/
+    cursor: pointer;
+}
+
+.langActive {
+    background-color: rgb(250, 250, 250) !important;
+    color: rgb(0, 0, 0) !important;
+    cursor: default !important;
+}
+
+.leftChain {
+    border-radius: 0.5em 0 0 0.5em;
+}
+
+.rightChain {
+    border-radius: 0 0.5em 0.5em 0;
+}
